@@ -13,7 +13,7 @@ class StoryController < ApplicationController
     @event = Event.all.sample
     @event.triggered += 1
     @event.save
-    @abilities = Ability.all
+    @abilities = Ability.where(cooldown: 0)
   end
 
   private

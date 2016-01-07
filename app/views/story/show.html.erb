@@ -20,8 +20,9 @@
         <p>Select X characters to X<p>
         <% @living_characters.each do |character| %>
           <%= check_box_tag 'char_ids[]', character.id -%>
-          <%= h character.name -%>
+          <%= h character.name %>
         <% end %>
+        <%= hidden_field_tag "day", @story.day %>
         <br><br>
         <%= submit_tag(value = "submit", options = {}) %>
         <% end %>
@@ -32,7 +33,7 @@
         <p>Abilities</p>
       </div>
       <% @abilities.each do |ability| %>
-        <%= link_to ability.text, ability_path(ability) %>
+        <%= link_to ability.text, ability_path(ability), id: "ability#{ability.id}" %>
       <% end %>
     </div>
 
