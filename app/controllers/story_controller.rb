@@ -9,7 +9,7 @@ class StoryController < ApplicationController
   end
 
   def show
-    @story = params[:story_id] || Story.find(params[:id])
+    @story = Story.find(params[:id])
     @characters = Character.all
     @living_characters = Character.where(status: ['alive', 'infected'])
     @infected_characters = Character.where(status: 'infected')
