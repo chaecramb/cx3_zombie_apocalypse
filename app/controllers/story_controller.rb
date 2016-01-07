@@ -6,5 +6,6 @@ class StoryController < ApplicationController
 
   def show
     @story = Story.find(params[:id])
+    @characters = Character.all
   end
 end
