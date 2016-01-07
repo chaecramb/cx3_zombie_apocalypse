@@ -35,6 +35,43 @@ zombieApp.setup = function() {
     e.preventDefault();
     ajaxGetRequest("/ability/1");
   });
+  $('#ability2').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/2");
+  });
+  $('#ability3').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/3");
+  });
+  $('#ability4').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/4");
+  });
+  $('#ability5').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/5");
+  });
+  $('#ability6').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/6");
+  });
+  $('#ability7').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/7");
+  });
+  $('#ability8').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/8");
+  });
+  $('#ability9').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/9");
+  });
+  $('#ability10').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/10");
+  });
+  
   $('#submit-button').click(1, function(e){
     e.preventDefault();
     var params = [];
