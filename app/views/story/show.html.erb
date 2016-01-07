@@ -22,13 +22,6 @@
           <%= check_box_tag 'char_ids[]', character.id -%>
           <%= h character.name -%>
         <% end %>
-        <% if @event.event_type == 1 %>
-          <p>Select a second character</p>
-          <% @living_characters.each do |character| %>
-            <%= check_box_tag 'char_ids[]', character.id -%>
-            <%= h character.name -%>
-          <% end %>
-        <% end %>
         <br><br>
         <%= submit_tag(value = "submit", options = {}) %>
         <% end %>
