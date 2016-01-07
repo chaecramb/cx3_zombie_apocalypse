@@ -32,6 +32,9 @@ zombieApp.setup = function() {
       };
     };
     sendParams("/story/event_result", characters);
+    $('#next-link').attr('style', 'display: inline');
+    $('.event-success').attr('style', 'display: inline');
+    $('.event-failure').attr('style', 'display: inline');
   });
 };
 

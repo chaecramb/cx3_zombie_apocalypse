@@ -26,6 +26,10 @@
         <br><br>
         <%= submit_tag(value = "submit", id: "submit-button") %>
         <% end %>
+        <p class="event-success"><%= @event.success %></p>
+        <p class="event-failure"><%= @event.failure %></p>
+        <br>
+        <%= link_to "next", "/story/#{@story.id + 1}", id: 'next-link' %>
     </div>
 
     <div class='box'>
