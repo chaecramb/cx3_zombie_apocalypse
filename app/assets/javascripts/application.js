@@ -53,7 +53,9 @@ zombieApp.setup = function() {
 };
 
 $(document).ready(function() {
-  zombieApp.setup(); 
+  zombieApp.setup();
+  $('#chatlog').animate({
+  scrollTop: $('#chatlog').get(0).scrollHeight}, 2000);  
 });
 
 function sendParams(url, q){
