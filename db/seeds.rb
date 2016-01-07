@@ -38,6 +38,6 @@ Character.create(name: 'Leigh-Anne', status: 'alive', morale: 5, attack: 0, open
 
 Event.create(setting: 'Zombies burst in front door', event_type: 1, triggered: 0, success: 'character won', failure: 'character died', difficulty: 6)
 
-
-
+Ability.delete_all
 Ability.create(text: 'Keano takes a line', name: 'keano', character_id: 2, stat: "attack", boost: 5, days_to_cooldown: 7)
+Ability.create(text: 'Kieran writes Dinosaur Porn for Simon', name: 'Kieran', character_id: 14, stat: "morale", boost: 5, days_to_cooldown: 3)
