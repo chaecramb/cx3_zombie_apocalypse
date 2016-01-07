@@ -95,7 +95,7 @@ function ajaxGetRequest(endPoint) {
   }
 
 zombieApp.randomDelay = function() {
-  return (Math.random() * 5 + 2) * 100000000000;
+  return (Math.random() * 5 + 2) * 1000;
 }
 
 zombieApp.startChatting = function() {

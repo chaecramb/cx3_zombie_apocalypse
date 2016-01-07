@@ -36,8 +36,8 @@ Character.create(name: 'Tony', status: 'alive', morale: 5, attack: 3, opener1: '
 Character.create(name: 'Susie', status: 'alive', morale: 6, attack: 2, opener1: 'You wouldnt want to meet me down a dark alley', opener2: 'Can I draw on the barricade?', reply1: 'I’ve literally never spoken to you in my life', reply2: 'Does the blood on my top match my lipstick?', reply3: 'I might be blond but Im not stoopid!', reply4: 'I can’t run away - I’m not wearing a bra!')
 Character.create(name: 'Leigh-Anne', status: 'alive', morale: 5, attack: 0, opener1: 'You’s are all my weans.', opener2: 'I don’t believe in zombies.', reply1: 'what’s that?', reply2: 'what do you mean?', reply3: 'I don’t get it', reply4: 'just like planets, that doesn’t exist.')
 
-Event.create(setting: 'Zombies burst in front door', event_type: 1, triggered: 0, success: 'character won', failure: 'character died')
-Event.create(setting: 'Zombies burst in back door', event_type: 1, triggered: 0, success: 'character won', failure: 'character died')
+Event.create(setting: 'Zombies burst in front door', event_type: 1, triggered: 0, success: 'character won', failure: 'character died', difficulty: 6)
+
 
 
 Ability.create(text: 'Keano takes a line', name: 'keano', character_id: 2, stat: "attack", boost: 5, days_to_cooldown: 7)
