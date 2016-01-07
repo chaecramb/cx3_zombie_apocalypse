@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  setting: MyText
+  type: 1
+  end: MyText
+  story_id: 1
+  weapon_id: 1
+  triggered: 1
+
+two:
+  setting: MyText
+  type: 1
+  end: MyText
+  story_id: 1
+  weapon_id: 1
+  triggered: 1

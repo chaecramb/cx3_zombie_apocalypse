@@ -1,0 +1,4 @@
+<p>Day: <%= @story.day %></p>
+<p><%= @story.text %></p>
+
+<%= link_to 'next', story_path(@story.id + 1) %>
