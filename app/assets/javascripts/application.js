@@ -19,9 +19,10 @@
 var zombieApp = zombieApp || {};
 
 zombieApp.setup = function() {
+  var no_of_chars = 22;
   $('#ability1').click(1, function(e){
     e.preventDefault();
-    ajaxGetRequest("/ability/keano");
+    ajaxGetRequest("/ability/1");
   });
   $('#submit-button').click(1, function(e){
     e.preventDefault();
