@@ -5,12 +5,18 @@ class StoryController < ApplicationController
   end
 
   def show
-    @story = Story.find(params[:id])
+    @story = params[:story_id] || Story.find(params[:id])
     @characters = Character.all
     @living_characters = Character.where(status: ['alive', 'infected'])
+    @infected_characters = Character.where(status: 'infected')
     # @event = Event.where.not(triggered: 1).sample
     @event = Event.all.sample
     @event.triggered += 1
     @event.save
+  end
+
+  private
+  def story_params
+    params.require(:story).permit(:story_id)
   end
 end

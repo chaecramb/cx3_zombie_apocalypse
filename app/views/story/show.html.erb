@@ -16,6 +16,7 @@
       <div class='events'>
         <p><%= @event.setting %></p>
       </div>
+        <%= form_tag("/story/#{@story.id + 1}", method: "get") do %>
         <p>Select X characters to X<p>
         <% @living_characters.each do |character| %>
           <%= check_box_tag 'char_ids[]', character.id -%>
@@ -29,7 +30,8 @@
           <% end %>
         <% end %>
         <br><br>
-        <%= link_to 'next', story_path(@story.id + 1) %>
+        <%= submit_tag(value = "submit", options = {}) %>
+        <% end %>
     </div>
 
     <div class='box'>
