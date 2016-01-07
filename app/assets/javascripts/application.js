@@ -22,6 +22,20 @@ zombieApp.setup = function() {
     e.preventDefault();
     ajaxGetRequest("/ability/keano");
   });
+  $('#submit-button').click(1, function(e){
+    e.preventDefault();
+    var characters = [];
+    var no_of_chars = 22;
+    for (var i = 1; i <= no_of_chars; i++) {
+      if ($('#' + String(i)).is(":checked")){
+        characters.push(i);
+      };
+    };
+    sendParams("/story/event_result", characters);
+    $('#next-link').attr('style', 'display: inline');
+    $('.event-success').attr('style', 'display: inline');
+    $('.event-failure').attr('style', 'display: inline');
+  });
 };
 
 zombieApp.abilityHandler = function() {
@@ -31,6 +45,15 @@ zombieApp.abilityHandler = function() {
 $(document).ready(function() {
   zombieApp.setup(); 
 });
+
+function sendParams(url, q){
+  $.ajax({
+    url: url,
+    type: 'get',
+    data: {'q':q},
+    contentType: 'json'
+  });
+}
 
 
 function ajaxGetRequest(endPoint) {

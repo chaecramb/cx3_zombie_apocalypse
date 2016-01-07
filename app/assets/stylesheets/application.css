@@ -503,3 +503,15 @@
   border: 0px;
   overflow: scroll;
 }
+
+#next-link {
+  display: none;
+}
+
+.event-success {
+  display: none;
+}
+
+.event-failure {
+  display: none;
+}

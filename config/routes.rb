@@ -1,8 +1,14 @@
 Rails.application.routes.draw do
   root to: 'story#index'
+  get '/ability/keano', to: 'ability#keano'
+  get '/story/next', to: 'story#next'
+  get '/story/event_result', to: 'story#event_result'
   resources :story
   resources :character
   resources :ability
+
+
+
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

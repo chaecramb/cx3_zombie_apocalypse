@@ -4,6 +4,19 @@ class StoryController < ApplicationController
     @story = Story.first
   end
 
+  def next
+    if @abilities_on_cooldown
+      @abilities_on_cooldown.each do |ability|
+        ability.cooldown -= 1
+        ability.save
+      end
+    end
+  end
+
+  def event_result
+    params[:q]
+  end
+
   def show
     @story = params[:story_id] || Story.find(params[:id])
     @characters = Character.all

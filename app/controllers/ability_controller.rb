@@ -1,6 +1,6 @@
 class AbilityController < ApplicationController
 
-  def show
+  def keano
     @keano = Character.find(2)
     @keano.attack += 5
     @ability = Ability.find(1)
@@ -10,7 +10,6 @@ class AbilityController < ApplicationController
 
 
     respond_to do |format|
-      format.html
       format.js
       format.json {render :json => @ability  }
     end
