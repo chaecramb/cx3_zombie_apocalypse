@@ -35,6 +35,10 @@ zombieApp.setup = function() {
     e.preventDefault();
     ajaxGetRequest("/ability/1");
   });
+  $('#ability1').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/1");
+  });
   $('#ability2').click(1, function(e){
     e.preventDefault();
     ajaxGetRequest("/ability/2");
@@ -127,7 +131,6 @@ function ajaxGetRequest(endPoint) {
           console.log('that all worked just fine');
           $(".characters").load("/story/1 .characters");
           $(".abilities_list").load("/story/1 .abilities_list");
-
         } else if(xmlhttp.status == 404) {
           console.error('There was an error 404');
         } else {

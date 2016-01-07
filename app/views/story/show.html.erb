@@ -24,7 +24,6 @@
       </div>
       <div id='event-form'>
         <%= form_tag("/story/1", method: "get") do %>
-        <p>Select X characters to X<p>
           <% @living_characters.each do |character| %>
           <%= check_box_tag character.id, character.id -%>
           <%= h character.name %>
@@ -48,7 +47,8 @@
         <div class='abilities_list'>
           <% if @abilities %>
           <% @abilities.each do |ability| %>
-            <p><%= link_to ability.text, "/ability/#{ability.name}", id: "ability#{ability.id}" %></p>
+          <p><%= link_to ability.text, "/ability/#{ability.name}", id: "ability#{ability.id}", class: "ability-links" %></p>
+          <% end %>
           <% end %>
         </div>
       </div>
@@ -59,17 +59,17 @@
       <% @characters.each do |character| %>
       <div class="characterbox">
 
-    <p><%= character.name %></p> 
-    <% if character.status == 'alive' %>
-      Attack: <%= character.attack %><br>
-      Morale: <%= character.morale %>
-    <% elsif character.status == 'dead'
-       %>
-       Dead
-       <br>
-       <br>
-    <% end %>
-    <p><%= character.name %></p>
+        <p><%= character.name %></p> 
+        <% if character.status == 'alive' %>
+        Attack: <%= character.attack %><br>
+        Morale: <%= character.morale %>
+        <% elsif character.status == 'dead'
+        %>
+        Dead
+        <br>
+        <br>
+        <% end %>
+        <p><%= character.name %></p>
       </div>
       <% end %>
     </div>
