@@ -23,7 +23,7 @@ zombieApp.eventResult = function(e) {
   if (e.result === "success") {
     console.log("yay");
     $('.event-success').attr('style', 'display: inline');
-  } else if (e.result === "boo") {
+  } else if (e.result === "failure") {
     $('.event-failure').attr('style', 'display: inline');
     console.log("boo");
   };
@@ -71,7 +71,6 @@ zombieApp.setup = function() {
     e.preventDefault();
     ajaxGetRequest("/ability/10");
   });
-  
   $('#submit-button').click(1, function(e){
     e.preventDefault();
     var params = [];
@@ -87,6 +86,15 @@ zombieApp.setup = function() {
     $('#event-form').attr('style', 'display: none');
   });
   zombieApp.startChatting();
+  jQuery(function(){
+     var max = 3;
+     var checkboxes = jQuery('input[type="checkbox"]');
+
+     checkboxes.change(function(){
+        var current = checkboxes.filter(':checked').length;
+         checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
+     });
+  });
 };
 
 $(document).ready(function() {
