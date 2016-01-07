@@ -1,18 +1,17 @@
 class AbilityController < ApplicationController
 
-  def keano
-    @keano = Character.find(2)
-    @keano.attack += 5
-    @ability = Ability.find(1)
-    @ability.cooldown += 3
-    @ability.save
-    @keano.save
-
-
-    respond_to do |format|
-      format.js
-      format.json {render :json => @ability  }
+  def show
+    @ability = Ability.find(params[:id])
+    @character = Character.find(@ability.character_id)
+    case @ability.stat
+    when "attack"
+      @character.attack += @ability.boost
+    when "morale"
+      @character.morale += @ability.boost
     end
+    @ability.cooldown += @ability.days_to_cooldown
+    @ability.save
+    @character.save
   end
 
 end

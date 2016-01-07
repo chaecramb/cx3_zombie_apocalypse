@@ -11,6 +11,7 @@
 end
 
 Character.delete_all
+
 Character.create(name: 'Chae', status: 'alive', morale: 6, attack: 3, opener1: 'I think I might have just proved the existence of the Big Bang guys.', opener2: 'Is there any way we can monetize these zombies?', reply1: 'No, you are wrong.', reply2: 'I’m l33t haxor', reply3: 'When I rule the world, you can be my minions.', reply4: '*looks and nods, deeply*')
 Character.create(name: 'Keano', status: 'alive', morale: 6, attack: 1, opener1: 'I need to get so blasted my eyes fall out of my face..', opener2: 'Things that used to make you vomit barely give you a hard-on anymore..', reply1: 'Nah, crack is much better.', reply2: 'Yeah, that Zombie is well fuckable.', reply3: 'Gangrape? Hmmm', reply4: 'I think “graped” is the expression')
 Character.create(name: 'Graeme V', status: 'alive', morale: 6, attack: 0, opener1: 'Does anyone else miss John Cena?', opener2: 'I could probably wrestle my way out of this?', reply1: 'Yeah you do', reply2: 'Go and suck a field of dicks..', reply3: 'I will set you on fire..', reply4: 'No!')
@@ -38,4 +39,5 @@ Character.create(name: 'Leigh-Anne', status: 'alive', morale: 5, attack: 0, open
 Event.create(setting: 'Zombies burst in front door', event_type: 1, triggered: 0, success: 'character won', failure: 'character died')
 Event.create(setting: 'Zombies burst in back door', event_type: 1, triggered: 0, success: 'character won', failure: 'character died')
 
-Ability.create(text: 'Keano takes a line', name: 'keano')
+
+Ability.create(text: 'Keano takes a line', name: 'keano', character_id: 2, stat: "attack", boost: 5, days_to_cooldown: 3)
