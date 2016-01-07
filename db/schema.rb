@@ -13,16 +13,14 @@
 
 ActiveRecord::Schema.define(version: 20160107182949) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "abilities", force: :cascade do |t|
     t.string   "text"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.integer  "cooldown",   default: 0
-
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "cooldown"
     t.string   "name"
   end
 
