@@ -18,6 +18,17 @@
 
 var zombieApp = zombieApp || {};
 
+zombieApp.eventResult = function(e) {
+  console.log("event result callback");
+  if (e.result === "success") {
+    console.log("yay");
+    $('.event-success').attr('style', 'display: inline');
+  } else if (e.result === "boo") {
+    $('.event-failure').attr('style', 'display: inline');
+    console.log("boo");
+  };
+};
+
 zombieApp.setup = function() {
   var no_of_chars = 22;
   $('#ability1').click(1, function(e){
@@ -35,14 +46,8 @@ zombieApp.setup = function() {
     };
     sendParams("/story/event_result", characters);
     $('#next-link').attr('style', 'display: inline');
-    $('.event-success').attr('style', 'display: inline');
-    $('.event-failure').attr('style', 'display: inline');
     $('#event-form').attr('style', 'display: none');
   });
-};
-
-zombieApp.abilityHandler = function() {
-
 };
 
 $(document).ready(function() {
@@ -53,8 +58,10 @@ function sendParams(url, q){
   $.ajax({
     url: url,
     type: 'get',
-    data: {'q':q},
-    contentType: 'json'
+    data: {'q':q },
+    contentType: 'json',
+    success: zombieApp.eventResult,
+    error: console.log('there was an error with event callback')
   });
 }
 

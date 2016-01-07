@@ -6,6 +6,8 @@ class StoryController < ApplicationController
 
   def event_result
     params[:q]
+    output = {'result' => 'success'}.to_json
+    render json: output
   end
 
   def show
