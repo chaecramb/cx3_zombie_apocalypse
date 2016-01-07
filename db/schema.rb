@@ -18,9 +18,9 @@ ActiveRecord::Schema.define(version: 20160107171249) do
 
   create_table "abilities", force: :cascade do |t|
     t.string   "text"
-    t.datetime "created_at",             null: false
-    t.datetime "updated_at",             null: false
-    t.integer  "cooldown",   default: 0
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer  "cooldown"
     t.string   "name"
   end
 
