@@ -32,9 +32,11 @@
       <div class='abilities'>
         <p>Abilities</p>
       </div>
-      <% @abilities.each do |ability| %>
-        <%= link_to ability.text, ability_path(ability), id: "ability#{ability.id}" %>
-      <% end %>
+      <div class='abilities_list'>
+        <% @abilities.each do |ability| %>
+          <%= link_to ability.text, ability_path(ability), id: "ability#{ability.id}" %>
+        <% end %>
+      </div>
     </div>
 
   </div>
