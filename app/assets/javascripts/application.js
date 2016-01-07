@@ -44,6 +44,7 @@ function ajaxGetRequest(endPoint) {
         if(xmlhttp.status == 200) {
           console.log('that all worked just fine');
           $(".characters").load("/story/1 .characters");
+          $(".abilities").load("/story/1 .abilities");
 
         } else if(xmlhttp.status == 404) {
           console.error('There was an error 404');

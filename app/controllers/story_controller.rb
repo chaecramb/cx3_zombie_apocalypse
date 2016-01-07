@@ -14,6 +14,13 @@ class StoryController < ApplicationController
     @event.triggered += 1
     @event.save
     @abilities = Ability.where(cooldown: 0)
+    @abilities_on_cooldown = Ability.where.not(cooldown: 0)
+    if @abilities_on_cooldown
+      @abilities_on_cooldown.each do |ability|
+        ability.cooldown -= 1
+        ability.save
+      end
+    end
   end
 
   private
