@@ -50,10 +50,9 @@
   </div>
 
   <div class='characters'>
-    <h3>Characters</h3>
     <% @characters.each do |character| %>
     <div class="characterbox">
-    <p><%= character.name %> Attack: <%= character.attack %></p>
+    <p><%= character.name %></p>
     </div>
     <% end %>
   </div>
