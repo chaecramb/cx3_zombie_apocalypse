@@ -40,4 +40,4 @@ Event.create(setting: 'Zombies burst in front door', event_type: 1, triggered: 0
 Event.create(setting: 'Zombies burst in back door', event_type: 1, triggered: 0, success: 'character won', failure: 'character died')
 
 
-Ability.create(text: 'Keano takes a line', name: 'keano', character_id: 2, stat: "attack", boost: 5, days_to_cooldown: 3)
+Ability.create(text: 'Keano takes a line', name: 'keano', character_id: 2, stat: "attack", boost: 5, days_to_cooldown: 7)

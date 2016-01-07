@@ -7,6 +7,7 @@ class StoryController < ApplicationController
   def event_result
     @character = Character.find(params[:q])
     puts @character.inspect
+    puts params
     output = {'result' => 'success'}.to_json
     render json: output
   end
