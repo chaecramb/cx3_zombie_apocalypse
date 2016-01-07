@@ -3,7 +3,7 @@
 
 <h3>Characters</h3>
 <% @characters.each do |character| %>
-<p><%= character.name %> Status: <%= character.status %>Morale: <%= character.morale %>Attack: <%= character.attack %></p>
-
+<p><%= character.name %> Status: <%= character.status %> Morale: <%= character.morale %> Attack: <%= character.attack %></p>
+<% end %>
 
 <%= link_to 'next', story_path(@story.id + 1) %>
