@@ -7,5 +7,6 @@ class StoryController < ApplicationController
   def show
     @story = Story.find(params[:id])
     @characters = Character.all
+    @event = Event.where.not(triggered: 1).sample
   end
 end
