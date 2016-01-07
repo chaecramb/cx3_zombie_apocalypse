@@ -50,7 +50,9 @@
   <div class='characters'>
     <h3>Characters</h3>
     <% @characters.each do |character| %>
-    <p><%= character.name %> Status: <%= character.status %> Morale: <%= character.morale %> Attack: <%= character.attack %></p>
+    <div class="characterbox">
+    <p><%= character.name %> Attack: <%= character.attack %></p>
+    </div>
     <% end %>
   </div>
 
