@@ -443,7 +443,7 @@
  }
 
  .column {
-  max-height: 27rem
+  max-height: 27rem;
   margin: 0px;
   padding: 0px;
   border: 0px;
@@ -514,4 +514,12 @@
 
 .event-failure {
   display: none;
+}
+
+.characterbox {
+  display: inline-block;
+  border: 2px solid black;
+  border-radius: 25px;
+  width: 20%;
+  text-align: center;
 }
