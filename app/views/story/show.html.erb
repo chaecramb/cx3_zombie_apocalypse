@@ -1,17 +1,16 @@
 <div class='game'>
 
-<div class='dayticker'>
-  <h4>Day: <%= @story.day %></h4>
-</div>
+  <div class='dayticker'>
+    <h4>Day: <%= @story.day %></h4>
+  </div>
 
   <div class='column'>
 
     <div class='box'>
       <div class='eventlog'>
-      <div class="events">
-      <h3>Event Information</h3>
-      </div>
-         <p> <%= @event.setting %></p>
+        <div class="events">
+          <h3>Event Log</h3>
+        </div>
       </div>
       <ul id='chatlog'>
       </ul>
@@ -19,14 +18,16 @@
 
     <div class='box'>
       <div class='events'>
+        <h3>Event Log</h3>
+        <p> <%= @event.setting %></p>
         <h4>Please choose your character for this event</h4>
       </div>
-        <div id='event-form'>
-          <%= form_tag("/story/1", method: "get") do %>
-          <p>Select X characters to X<p>
+      <div id='event-form'>
+        <%= form_tag("/story/1", method: "get") do %>
+        <p>Select X characters to X<p>
           <% @living_characters.each do |character| %>
-            <%= check_box_tag character.id, character.id -%>
-            <%= h character.name %>
+          <%= check_box_tag character.id, character.id -%>
+          <%= h character.name %>
           <% end %>
           <%= hidden_field_tag "day", @story.day %>
           <%= hidden_field_tag "event", @event.id %>
@@ -38,34 +39,34 @@
         <p class="event-failure"><%= @event.failure %></p>
         <br>
         <%= link_to "Next day", story_path(@story.id + 1, {:next_day => true }), id: 'next-link'%>
-    </div>
-
-    <div class='box'>
-      <div class='events'>
-        <h4>Abilities</h4>
       </div>
-      <div class='abilities_list'>
-        <% if @abilities %>
+
+      <div class='box'>
+        <div class='events'>
+          <h4>Abilities</h4>
+        </div>
+        <div class='abilities_list'>
+          <% if @abilities %>
           <% @abilities.each do |ability| %>
-            <%= link_to ability.text, "/ability/#{ability.name}", id: "ability#{ability.id}" %>
+          <%= link_to ability.text, "/ability/#{ability.name}", id: "ability#{ability.id}" %>
           <% end %>
-        <% end %>
+          <% end %>
+        </div>
       </div>
+
+    </div>
+
+    <div class='characters'>
+      <% @characters.each do |character| %>
+      <div class="characterbox">
+
+        <p><%= character.name %> <br> Attack: <%= character.attack %></p>
+        <p>Morale: <%= character.morale %></p>
+
+        <p><%= character.name %></p>
+
+      </div>
+      <% end %>
     </div>
 
   </div>
-
-  <div class='characters'>
-    <% @characters.each do |character| %>
-    <div class="characterbox">
-
-    <p><%= character.name %> <br> Attack: <%= character.attack %></p>
-    <p>Morale: <%= character.morale %></p>
-
-    <p><%= character.name %></p>
-
-    </div>
-    <% end %>
-  </div>
-
-</div>
