@@ -5,12 +5,42 @@ class StoryController < ApplicationController
   end
 
   def event_result
-    @character = Character.find(params[:q].first)
+    @characters = Character.find(params[:q].first params[:q].size - 1)
     @event = Event.find(params[:q].last)
 
-        
+    @combined_attack = @characters.inject(0){|t, c| t+=c.attack }
+    @combined_morale = @characters.inject(0){|t, c| t+=c.morale }
 
-    output = {'result' => 'success'}.to_json
+    case @event.event_type
+    when 1
+      if @combined_attack >= @event.difficulty 
+        @result = 'success' 
+      else 
+        @result = 'failure'
+        @characters.each do |character|        
+          character.status = 'dead'
+          character.save
+        end
+      end
+    when 2
+    when 3
+      when 1
+        if @combined_morale >= @event.difficulty 
+          @result = 'success' 
+          @characters.each do |character|        
+            character.morale += @event.difficulty
+            character.save
+          end
+        else 
+          @result = 'failure'
+          @characters.each do |character|        
+            character.morale += @event.difficulty
+            character.save
+          end
+        end
+    end   
+
+    output = {'result' => @result}.to_json
     render json: output
   end
 

@@ -23,7 +23,7 @@ zombieApp.eventResult = function(e) {
   if (e.result === "success") {
     console.log("yay");
     $('.event-success').attr('style', 'display: inline');
-  } else if (e.result === "boo") {
+  } else if (e.result === "failure") {
     $('.event-failure').attr('style', 'display: inline');
     console.log("boo");
   };
@@ -34,6 +34,42 @@ zombieApp.setup = function() {
   $('#ability1').click(1, function(e){
     e.preventDefault();
     ajaxGetRequest("/ability/1");
+  });
+  $('#ability2').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/2");
+  });
+  $('#ability3').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/3");
+  });
+  $('#ability4').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/4");
+  });
+  $('#ability5').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/5");
+  });
+  $('#ability6').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/6");
+  });
+  $('#ability7').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/7");
+  });
+  $('#ability8').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/8");
+  });
+  $('#ability9').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/9");
+  });
+  $('#ability10').click(1, function(e){
+    e.preventDefault();
+    ajaxGetRequest("/ability/10");
   });
   $('#submit-button').click(1, function(e){
     e.preventDefault();
@@ -50,6 +86,15 @@ zombieApp.setup = function() {
     $('#event-form').attr('style', 'display: none');
   });
   zombieApp.startChatting();
+  jQuery(function(){
+     var max = 3;
+     var checkboxes = jQuery('input[type="checkbox"]');
+
+     checkboxes.change(function(){
+        var current = checkboxes.filter(':checked').length;
+         checkboxes.filter(':not(:checked)').prop('disabled', current >= max);
+     });
+  });
 };
 
 $(document).ready(function() {
