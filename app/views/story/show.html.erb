@@ -14,9 +14,8 @@
 
     <div class='box'>
       <div class='events'>
-      <p>Event</p>
-      </div>
         <p><%= @event.setting %></p>
+      </div>
         <p>Select X characters to X<p>
         <% @living_characters.each do |character| %>
           <%= check_box_tag 'char_ids[]', character.id -%>
@@ -29,12 +28,13 @@
             <%= h character.name -%>
           <% end %>
         <% end %>
+        <br><br>
         <%= link_to 'next', story_path(@story.id + 1) %>
     </div>
 
     <div class='box'>
       <div class='abilities'>
-        Abilities
+        <p>Abilities</p>
       </div>
     </div>
 
