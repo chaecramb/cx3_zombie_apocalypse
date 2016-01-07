@@ -33,8 +33,10 @@
         <p>Abilities</p>
       </div>
       <div class='abilities_list'>
-        <% @abilities.each do |ability| %>
-          <%= link_to ability.text, ability_path(ability), id: "ability#{ability.id}" %>
+        <% if @abilities %>
+          <% @abilities.each do |ability| %>
+            <%= link_to ability.text, "/ability/#{ability.name}", id: "ability#{ability.id}" %>
+          <% end %>
         <% end %>
       </div>
     </div>
