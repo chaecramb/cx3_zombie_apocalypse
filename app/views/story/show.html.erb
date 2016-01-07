@@ -16,16 +16,18 @@
       <div class='events'>
         <p><%= @event.setting %></p>
       </div>
-        <%= form_tag("/story/#{@story.id + 1}", method: "get") do %>
-        <p>Select X characters to X<p>
-        <% @living_characters.each do |character| %>
-          <%= check_box_tag character.id, character.id -%>
-          <%= h character.name %>
-        <% end %>
-        <%= hidden_field_tag "day", @story.day %>
-        <br><br>
-        <%= submit_tag(value = "submit", id: "submit-button") %>
-        <% end %>
+        <div id='event-form'>
+          <%= form_tag("/story/#{@story.id + 1}", method: "get") do %>
+          <p>Select X characters to X<p>
+          <% @living_characters.each do |character| %>
+            <%= check_box_tag character.id, character.id -%>
+            <%= h character.name %>
+          <% end %>
+          <%= hidden_field_tag "day", @story.day %>
+          <br><br>
+          <%= submit_tag(value = "submit", id: "submit-button") %>
+          <% end %>
+        </div>
         <p class="event-success"><%= @event.success %></p>
         <p class="event-failure"><%= @event.failure %></p>
         <br>
