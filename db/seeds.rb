@@ -40,4 +40,12 @@ Event.create(setting: 'Zombies burst in front door', event_type: 1, triggered: 0
 
 Ability.delete_all
 Ability.create(text: 'Keano takes a line', name: 'keano', character_id: 2, stat: "attack", boost: 5, days_to_cooldown: 7)
-Ability.create(text: 'Kieran writes Dinosaur Porn for Simon', name: 'Kieran', character_id: 14, stat: "morale", boost: 5, days_to_cooldown: 3)
+Ability.create(text: 'Kieran writes Dinosaur Porn for Simon', name: 'Kieran', character_id: 14, stat: "morale", boost: 2, days_to_cooldown: 3)
+Ability.create(text: 'Chae hacks life to give Tony fists of FIRE', name: 'Kieran', character_id: 14, stat: "attack", boost: 15, days_to_cooldown: 30)
+Ability.create(text: 'Val chooses Bulbasaur!', name: 'Kieran', character_id: 16, stat: "attack", boost: 4, days_to_cooldown: 30)
+Ability.create(text: 'Graeme ponders John Cena', name: 'Kieran', character_id: 3, stat: "morale", boost: -1, days_to_cooldown: 1)
+Ability.create(text: "Tony cooks Gluten-free meal for Peter. Peter doesn't get any.", name: 'Kieran', character_id: 21, stat: "morale", boost: 1, days_to_cooldown: 5)
+Ability.create(text: 'Leigh-Anne applies warpaint to face', name: 'Kieran', character_id: 23, stat: "morale", boost: 1, days_to_cooldown: 1)
+Ability.create(text: 'Susie *tries* to play Rockband bass', name: 'Kieran', character_id: 4, stat: "morale", boost: 2, days_to_cooldown: 10)
+Ability.create(text: 'Neil grooms mustache', name: 'Kieran', character_id: 10, stat: "morale", boost: 1, days_to_cooldown: 1)
+Ability.create(text: 'Nevin practices his Police brutallity!', name: 'Kieran', character_id: 7, stat: "attack", boost: 1, days_to_cooldown: 3)
