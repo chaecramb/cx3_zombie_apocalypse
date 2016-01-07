@@ -17,7 +17,7 @@
         <p><%= @event.setting %></p>
       </div>
         <div id='event-form'>
-          <%= form_tag("/story/#{@story.id + 1}", method: "get") do %>
+          <%= form_tag("/story/1}", method: "get") do %>
           <p>Select X characters to X<p>
           <% @living_characters.each do |character| %>
             <%= check_box_tag character.id, character.id -%>
@@ -31,7 +31,8 @@
         <p class="event-success"><%= @event.success %></p>
         <p class="event-failure"><%= @event.failure %></p>
         <br>
-        <%= link_to "next", "/story/#{@story.id + 1}", id: 'next-link' %>
+        <%= link_to "Next day", {:controller => "story", :action => "show", :next_day => true, id: 'next-link' }%>
+
     </div>
 
     <div class='box'>
