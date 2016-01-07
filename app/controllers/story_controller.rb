@@ -11,6 +11,18 @@ class StoryController < ApplicationController
     render json: output
   end
 
+  def opener
+    post_character = Character.all.sample
+    render json: {character_id: post_character.id, name: post_character.name, opener: post_character.random_opener}
+  end
+
+  def reply
+    post_character = Character.find(params[:character_id])
+    reply_character = Character.excluding(post_character).sample
+    render json: {name: reply_character.name, reply: reply_character.random_reply}
+  end
+
+
   def show
     @story = Story.find(params[:id])
     @characters = Character.all
