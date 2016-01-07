@@ -3,6 +3,8 @@ Rails.application.routes.draw do
   get '/ability/keano', to: 'ability#keano'
   get '/story/next', to: 'story#next'
   get '/story/event_result', to: 'story#event_result'
+  get '/story/opener', to: 'story#opener'
+  get '/story/reply', to: 'story#reply'
   resources :story
   resources :character
   resources :ability
