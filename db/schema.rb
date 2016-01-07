@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160107120824) do
+ActiveRecord::Schema.define(version: 20160107133923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -29,13 +29,14 @@ ActiveRecord::Schema.define(version: 20160107120824) do
 
   create_table "events", force: :cascade do |t|
     t.text     "setting"
-    t.integer  "type"
-    t.text     "end"
     t.integer  "story_id"
     t.integer  "weapon_id"
     t.integer  "triggered"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.text     "success"
+    t.text     "failure"
+    t.integer  "event_type"
   end
 
   create_table "stories", force: :cascade do |t|

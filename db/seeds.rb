@@ -34,3 +34,5 @@ Character.create(name: 'Tony', status: 'alive', morale: 5, attack: 3)
 Character.create(name: 'Susie', status: 'alive', morale: 6, attack: 2)
 Character.create(name: 'Leigh-Anne', status: 'alive', morale: 5, attack: 0)
 Character.create(name: 'Michael', status: 'alive', morale: 10, attack: 15)
+
+Event.create(setting: 'Zombies burst in front door', event_type: 1, triggered: 0, success: 'character won', failure: 'character died')
