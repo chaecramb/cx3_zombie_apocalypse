@@ -37,14 +37,15 @@ zombieApp.setup = function() {
   });
   $('#submit-button').click(1, function(e){
     e.preventDefault();
-    var characters = [];
+    var params = [];
     var no_of_chars = 22;
     for (var i = 1; i <= no_of_chars; i++) {
       if ($('#' + String(i)).is(":checked")){
-        characters.push(i);
+        params.push(i);
       };
     };
-    sendParams("/story/event_result", characters);
+    params.push($('#event').val());
+    sendParams("/story/event_result", params);
     $('#next-link').attr('style', 'display: inline');
     $('#event-form').attr('style', 'display: none');
   });
@@ -94,7 +95,7 @@ function ajaxGetRequest(endPoint) {
   }
 
 zombieApp.randomDelay = function() {
-  return (Math.random() * 5 + 2) * 1000;
+  return (Math.random() * 5 + 2) * 100000000000;
 }
 
 zombieApp.startChatting = function() {

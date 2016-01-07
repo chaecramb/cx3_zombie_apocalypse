@@ -29,6 +29,7 @@
             <%= h character.name %>
           <% end %>
           <%= hidden_field_tag "day", @story.day %>
+          <%= hidden_field_tag "event", @event.id %>
           <br><br>
           <%= submit_tag(value = "submit", id: "submit-button") %>
           <% end %>
