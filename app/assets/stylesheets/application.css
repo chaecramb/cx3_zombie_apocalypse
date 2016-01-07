@@ -519,7 +519,7 @@
 .characterbox {
   display: inline-block;
   border: 2px solid black;
-  border-radius: 25px;
-  width: 20%;
+  border-radius: 100px;
+  width: 7%;
   text-align: center;
 }
