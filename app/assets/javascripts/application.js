@@ -35,6 +35,7 @@ zombieApp.setup = function() {
     $('#next-link').attr('style', 'display: inline');
     $('.event-success').attr('style', 'display: inline');
     $('.event-failure').attr('style', 'display: inline');
+    $('#event-form').attr('style', 'display: none');
   });
 };
 
