@@ -4,21 +4,12 @@ class StoryController < ApplicationController
     @story = Story.first
   end
 
-  def next
-    if @abilities_on_cooldown
-      @abilities_on_cooldown.each do |ability|
-        ability.cooldown -= 1
-        ability.save
-      end
-    end
-  end
-
   def event_result
     params[:q]
   end
 
   def show
-    @story = params[:story_id] || Story.find(params[:id])
+    @story = Story.find(params[:id])
     @characters = Character.all
     @living_characters = Character.where(status: ['alive', 'infected'])
     @infected_characters = Character.where(status: 'infected')
@@ -28,10 +19,13 @@ class StoryController < ApplicationController
     @event.save
     @abilities = Ability.where(cooldown: 0)
     @abilities_on_cooldown = Ability.where.not(cooldown: 0)
-    if @abilities_on_cooldown
-      @abilities_on_cooldown.each do |ability|
-        ability.cooldown -= 1
-        ability.save
+    @next_day = params[:next_day]
+    if @next_day
+      if @abilities_on_cooldown
+        @abilities_on_cooldown.each do |ability|
+          ability.cooldown -= 1
+          ability.save
+        end
       end
     end
   end

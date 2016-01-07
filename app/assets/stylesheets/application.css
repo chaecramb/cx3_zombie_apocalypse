@@ -521,7 +521,12 @@
 .characterbox {
   display: inline-block;
   border: 2px solid black;
+
   border-radius: 25px;
   width: 18%;
+
+  border-radius: 100px;
+  width: 7%;
+
   text-align: center;
 }
