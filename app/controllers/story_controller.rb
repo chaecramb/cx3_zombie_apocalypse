@@ -7,6 +7,10 @@ class StoryController < ApplicationController
   def show
     @story = Story.find(params[:id])
     @characters = Character.all
-    @event = Event.where.not(triggered: 1).sample
+    @living_characters = Character.where(status: ['alive', 'infected'])
+    # @event = Event.where.not(triggered: 1).sample
+    @event = Event.all.sample
+    @event.triggered += 1
+    @event.save
   end
 end
