@@ -13,6 +13,7 @@ class StoryController < ApplicationController
     @event = Event.all.sample
     @event.triggered += 1
     @event.save
+    @abilities = Ability.all
   end
 
   private

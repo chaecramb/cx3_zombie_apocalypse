@@ -37,8 +37,10 @@
     <div class='box'>
       <div class='abilities'>
         <p>Abilities</p>
-        <%= link_to 'take a line', ability_path %>
       </div>
+      <% @abilities.each do |ability| %>
+        <%= link_to ability.text, ability_path(ability) %>
+      <% end %>
     </div>
 
   </div>
