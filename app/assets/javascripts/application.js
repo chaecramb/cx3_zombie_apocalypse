@@ -182,11 +182,11 @@ zombieApp.chatReply = function(character_id) {
 
 
 zombieApp.drawOpener = function(data) {
-  $('#chatlog').append("<li class='opener'><h1>"+data.name+"</h1><p>"+data.opener+"</p></li>");
+  $('#chatlog').append("<li class='opener'><p class='nametitle'>"+data.name+": "+data.opener+"</p></li>");
 };
 
 zombieApp.drawReply = function(data) {
-  $('#chatlog').append("<li class='reply'><h1>"+data.name+"</h1><p>"+data.reply+"</p></li>");
+  $('#chatlog').append("<li class='reply'><p class='nametitle'>"+data.name+": "+data.reply+"</p></li>");
 };
 
 
