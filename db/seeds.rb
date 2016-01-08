@@ -37,10 +37,11 @@ Character.create(name: 'Susie', status: 'alive', morale: 6, attack: 2, opener1: 
 Character.create(name: 'Leigh-Anne', status: 'alive', morale: 5, attack: 0, opener1: 'You’s are all my weans.', opener2: 'I don’t believe in zombies.', reply1: 'what’s that?', reply2: 'what do you mean?', reply3: 'I don’t get it', reply4: 'just like planets, that doesn’t exist.')
 
 Event.delete_all
-Event.create(setting: 'Zombies burst in front door', event_type: 1, triggered: 0, success: 'character won', failure: 'character died', difficulty: 6)
+Event.create(setting: 'At 10:00am on a Thursday morning, the fire alarm is tested in Codebase. The high pitched wail does a lot more than just deafen survivors. All undead within a mile radius of the building are alerted and shuffle towards a possible breakfast. The sheer weight of the zombies pressing against the windows causes them to break. Wave after wave of the living dead spill into the common area. The group barely has time to react, three people have already heavily soiled themselves. Who will lead the fight against these unfavourable odds?', event_type: 1, triggered: 0, success: 'character won', failure: 'character died', difficulty: 11)
+# Event.create(setting: 'Zombies burst in front door', event_type: 1, triggered: 0, success: 'character won', failure: 'character died', difficulty: 6)
 
 Ability.delete_all
-Ability.create(text: 'Keano takes a line', name: 'keano', character_id: 2, stat: "attack", boost: 5, days_to_cooldown: 7)
+Ability.create(text: 'Keano takes a line', name: 'keano', character_id: 2, stat: "attack", boost: 3, days_to_cooldown: 7)
 Ability.create(text: 'Kieran writes Dinosaur Porn for Simon', name: 'Kieran', character_id: 14, stat: "morale", boost: 2, days_to_cooldown: 3)
 Ability.create(text: 'Chae hacks life to give Tony fists of FIRE', name: 'Kieran', character_id: 14, stat: "attack", boost: 15, days_to_cooldown: 30)
 Ability.create(text: 'Val chooses Bulbasaur!', name: 'Kieran', character_id: 16, stat: "attack", boost: 4, days_to_cooldown: 30)
