@@ -75,6 +75,9 @@ class StoryController < ApplicationController
           ability.save
         end
       end
+      @syed = Character.find(14)
+      @syed.status = 'alive'
+      @syed.save
     end
   end
 
