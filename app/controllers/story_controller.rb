@@ -48,6 +48,7 @@ class StoryController < ApplicationController
             character.save
             if charcter.morale <= 0
               character.status = 'dead'
+              character.save
             end
           end
         else 
