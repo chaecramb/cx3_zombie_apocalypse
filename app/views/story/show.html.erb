@@ -24,10 +24,12 @@
       </div>
       <div id='event-form'>
         <%= form_tag("/story/1", method: "get") do %>
+          <div id='character-options'>
           <% @living_characters.each do |character| %>
           <%= check_box_tag character.id, character.id -%>
           <%= h character.name %>
           <% end %>
+          </div>
           <%= hidden_field_tag "day", @story.day %>
           <%= hidden_field_tag "event", @event.id %>
           <br><br>
