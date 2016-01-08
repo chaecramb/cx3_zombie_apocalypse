@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160107220041) do
+ActiveRecord::Schema.define(version: 20160108104840) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -61,6 +61,7 @@ ActiveRecord::Schema.define(version: 20160107220041) do
     t.text     "failure"
     t.integer  "event_type"
     t.integer  "difficulty"
+    t.string   "eventimg"
   end
 
   create_table "stories", force: :cascade do |t|
