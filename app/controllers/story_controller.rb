@@ -94,13 +94,14 @@ class StoryController < ApplicationController
       @syed = Character.find(14)
       @syed.status = 'alive'
       @syed.save
-      @living_characters.each do |character|
+      @characters.each do |character|
         if character.morale <= 0
           character.status = 'dead'
           character.save
         end
       end
     end
+    @living_characters = Character.where(status: ['alive', 'infected'])
   end
 
   private
