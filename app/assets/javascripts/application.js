@@ -23,8 +23,10 @@ zombieApp.eventResult = function(e) {
   if (e.result === "success") {
     console.log("yay");
     $('.event-success').attr('style', 'display: inline');
+    $(".characters").load("/story/1 .characters");
   } else if (e.result === "failure") {
     $('.event-failure').attr('style', 'display: inline');
+    $(".characters").load("/story/1 .characters");
     console.log("boo");
   };
 };
