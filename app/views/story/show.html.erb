@@ -63,21 +63,21 @@
         <% if character.status == 'alive' && character.morale > 8%>
         Attack: <%= character.attack %><br>
         Morale: <%= character.morale %>
-        <%= character.img_happy %>
-        <% elsif character.status == 'alive' && character.morale =< 8 && character.morale > 4%>
+        <%= character.happyimg %>
+        <% elsif character.status == 'alive' && character.morale <= 8 && character.morale > 4%>
         Attack: <%= character.attack %><br>
         Morale: <%= character.morale %>
-        <%= character.img_deadpan %>
-        <% elsif character.status == 'alive' && character.morale =< 4%>
+        <%= character.deadpanimg %>
+        <% elsif character.status == 'alive' && character.morale <= 4%>
         Attack: <%= character.attack %><br>
         Morale: <%= character.morale %>
-        <%= character.img_sad %>
+        <%= character.sadimg %>
         <% elsif character.status == 'infected' %>
         Attack: <%= character.attack %><br>
         Morale: <%= character.morale %>
         <%= character.img_infected %>
         <% elsif character.status == 'dead'%>
-        <%= character.img_dead %>
+        <%= character.deadimg %>
         Dead
         <br>
         <br>

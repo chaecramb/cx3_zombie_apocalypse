@@ -46,6 +46,9 @@ class StoryController < ApplicationController
           @characters.each do |character|        
             character.morale += (@event.difficulty / 2).round
             character.save
+            if charcter.morale <= 0
+              character.status = 'dead'
+            end
           end
         else 
           @result = 'failure'
