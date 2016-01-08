@@ -130,7 +130,9 @@ function ajaxGetRequest(endPoint) {
         if(xmlhttp.status == 200) {
           console.log('that all worked just fine');
           $(".characters").load("/story/1 .characters");
-          $(".abilities_list").load("/story/1 .abilities_list");
+          // remove loading of abilities list
+          $('.abilities_list').attr('style', 'display: none')
+          // $(".abilities_list").load("/story/1 .abilities_list");
         } else if(xmlhttp.status == 404) {
           console.error('There was an error 404');
         } else {
