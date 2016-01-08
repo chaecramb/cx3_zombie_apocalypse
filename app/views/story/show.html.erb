@@ -60,6 +60,7 @@
     <div class='characters'>
       <% @characters.each do |character| %>
       <div class="characterbox">
+      
 
         <p><%= character.name %></p> 
         <% if character.status == 'alive' && character.morale > 8%>
