@@ -14,7 +14,11 @@ class StoryController < ApplicationController
     case @event.event_type
     when 1
       if @combined_attack >= @event.difficulty 
-        @result = 'success' 
+        @result = 'success'
+        @characters.each do |character|        
+          character.attack += (@event.difficulty / 2).round
+          character.save
+        end
       else 
         @result = 'failure'
         @characters.each do |character|        
@@ -23,21 +27,33 @@ class StoryController < ApplicationController
         end
       end
     when 2
-    when 3
-      when 1
-        if @combined_morale >= @event.difficulty 
-          @result = 'success' 
-          @characters.each do |character|        
-            character.morale += @event.difficulty
-            character.save
-          end
-        else 
-          @result = 'failure'
-          @characters.each do |character|        
-            character.morale += @event.difficulty
-            character.save
-          end
+      if @combined_attack >= @event.difficulty 
+        @result = 'success'
+        @characters.each do |character|        
+          character.attack += @event.weapon_id
+          character.save
         end
+      else 
+        @result = 'failure'
+        @characters.each do |character|        
+          character.status = 'dead'
+          character.save
+        end
+      end
+    when 3
+      if @combined_morale >= @event.difficulty 
+        @result = 'success' 
+        @characters.each do |character|        
+          character.morale += (@event.difficulty / 2).round
+          character.save
+        end
+      else 
+        @result = 'failure'
+        @characters.each do |character|        
+          character.morale -= (@event.difficulty / 2).round
+          character.save
+        end
+      end
     end   
 
     output = {'result' => @result}.to_json
@@ -78,7 +94,14 @@ class StoryController < ApplicationController
       @syed = Character.find(14)
       @syed.status = 'alive'
       @syed.save
+      @characters.each do |character|
+        if character.morale <= 0
+          character.status = 'dead'
+          character.save
+        end
+      end
     end
+    @living_characters = Character.where(status: ['alive', 'infected'])
   end
 
   private

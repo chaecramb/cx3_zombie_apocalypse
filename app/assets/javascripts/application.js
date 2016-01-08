@@ -23,8 +23,10 @@ zombieApp.eventResult = function(e) {
   if (e.result === "success") {
     console.log("yay");
     $('.event-success').attr('style', 'display: inline');
+    $(".characters").load("/story/1 .characters");
   } else if (e.result === "failure") {
     $('.event-failure').attr('style', 'display: inline');
+    $(".characters").load("/story/1 .characters");
     console.log("boo");
   };
 };
@@ -130,6 +132,7 @@ function ajaxGetRequest(endPoint) {
         if(xmlhttp.status == 200) {
           console.log('that all worked just fine');
           $(".characters").load("/story/1 .characters");
+          $("#character-options").load("/story/1 #character-options");
           // remove loading of abilities list
           $('.abilities_list').attr('style', 'display: none')
           // $(".abilities_list").load("/story/1 .abilities_list");

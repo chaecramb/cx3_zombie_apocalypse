@@ -24,10 +24,12 @@
       </div>
       <div id='event-form'>
         <%= form_tag("/story/1", method: "get") do %>
+          <div id='character-options'>
           <% @living_characters.each do |character| %>
           <%= check_box_tag character.id, character.id -%>
           <%= h character.name %>
           <% end %>
+          </div>
           <%= hidden_field_tag "day", @story.day %>
           <%= hidden_field_tag "event", @event.id %>
           <br><br>
@@ -60,11 +62,24 @@
       <div class="characterbox">
 
         <p><%= character.name %></p> 
-        <% if character.status == 'alive' %>
+        <% if character.status == 'alive' && character.morale > 8%>
         Attack: <%= character.attack %><br>
         Morale: <%= character.morale %>
-        <% elsif character.status == 'dead'
-        %>
+        <%= character.happyimg %>
+        <% elsif character.status == 'alive' && character.morale <= 8 && character.morale > 4%>
+        Attack: <%= character.attack %><br>
+        Morale: <%= character.morale %>
+        <%= character.deadpanimg %>
+        <% elsif character.status == 'alive' && character.morale <= 4%>
+        Attack: <%= character.attack %><br>
+        Morale: <%= character.morale %>
+        <%= character.sadimg %>
+        <% elsif character.status == 'infected' %>
+        Attack: <%= character.attack %><br>
+        Morale: <%= character.morale %>
+        <%= character.img_infected %>
+        <% elsif character.status == 'dead'%>
+        <%= character.deadimg %>
         Dead
         <br>
         <br>
