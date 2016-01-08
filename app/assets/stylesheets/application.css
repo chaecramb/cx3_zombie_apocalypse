@@ -548,11 +548,15 @@ img.bg {
   z-index: -2;
 }
 
-img.button {
+#enterButton {
+  display: block;
+text-align: center;
+}
+
+#enterButton img {
   margin-left: auto;
   margin-right: auto;
-  position: static;
+  position: relative;
   top: 50%;
-  transform: translateX(150%);
   transform: translateY(150%);
 }
