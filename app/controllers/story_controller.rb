@@ -34,7 +34,7 @@ class StoryController < ApplicationController
         else 
           @result = 'failure'
           @characters.each do |character|        
-            character.morale += @event.difficulty
+            character.morale -= @event.difficulty
             character.save
           end
         end
