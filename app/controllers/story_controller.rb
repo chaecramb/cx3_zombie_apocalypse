@@ -14,7 +14,11 @@ class StoryController < ApplicationController
     case @event.event_type
     when 1
       if @combined_attack >= @event.difficulty 
-        @result = 'success' 
+        @result = 'success'
+        @characters.each do |character|        
+          character.attack += (@event.difficulty / 2).round
+          character.save
+        end
       else 
         @result = 'failure'
         @characters.each do |character|        
@@ -23,18 +27,30 @@ class StoryController < ApplicationController
         end
       end
     when 2
+      if @combined_attack >= @event.difficulty 
+        @result = 'success'
+        @characters.each do |character|        
+          character.attack += @event.weapon_id
+          character.save
+        end
+      else 
+        @result = 'failure'
+        @characters.each do |character|        
+          character.status = 'dead'
+          character.save
+        end
+      end
     when 3
-      when 1
         if @combined_morale >= @event.difficulty 
           @result = 'success' 
           @characters.each do |character|        
-            character.morale += @event.difficulty
+            character.morale += (@event.difficulty / 2).round
             character.save
           end
         else 
           @result = 'failure'
           @characters.each do |character|        
-            character.morale += @event.difficulty
+            character.morale -= (@event.difficulty / 2).round
             character.save
           end
         end

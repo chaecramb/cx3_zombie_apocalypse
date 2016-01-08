@@ -60,11 +60,24 @@
       <div class="characterbox">
 
         <p><%= character.name %></p> 
-        <% if character.status == 'alive' %>
+        <% if character.status == 'alive' && character.morale > 8%>
         Attack: <%= character.attack %><br>
         Morale: <%= character.morale %>
-        <% elsif character.status == 'dead'
-        %>
+        <%= character.img_happy %>
+        <% elsif character.status == 'alive' && character.morale =< 8 && character.morale > 4%>
+        Attack: <%= character.attack %><br>
+        Morale: <%= character.morale %>
+        <%= character.img_deadpan %>
+        <% elsif character.status == 'alive' && character.morale =< 4%>
+        Attack: <%= character.attack %><br>
+        Morale: <%= character.morale %>
+        <%= character.img_sad %>
+        <% elsif character.status == 'infected' %>
+        Attack: <%= character.attack %><br>
+        Morale: <%= character.morale %>
+        <%= character.img_infected %>
+        <% elsif character.status == 'dead'%>
+        <%= character.img_dead %>
         Dead
         <br>
         <br>
