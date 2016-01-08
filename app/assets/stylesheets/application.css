@@ -31,15 +31,14 @@
   * Remove default margin.
   */
 
-  body {
+ body {
    margin: 0;
    background-color: black;
    font-family: HighZombie;
    font-size: 16px;
- }
 
  /* HTML5 display definitions
- ========================================================================== */
+    ========================================================================== */
 
  /**
   * Correct `block` display not defined for any HTML5 element in IE 8/9.
@@ -48,19 +47,19 @@
   * Correct `block` display not defined for `main` in IE 11.
   */
 
-  article,
-  aside,
-  details,
-  figcaption,
-  figure,
-  footer,
-  header,
-  hgroup,
-  main,
-  menu,
-  nav,
-  section,
-  summary {
+ article,
+ aside,
+ details,
+ figcaption,
+ figure,
+ footer,
+ header,
+ hgroup,
+ main,
+ menu,
+ nav,
+ section,
+ summary {
    display: block;
  }
 
@@ -69,10 +68,10 @@
   * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
   */
 
-  audio,
-  canvas,
-  progress,
-  video {
+ audio,
+ canvas,
+ progress,
+ video {
    display: inline-block; /* 1 */
    vertical-align: baseline; /* 2 */
  }
@@ -82,7 +81,7 @@
   * Remove excess height in iOS 5 devices.
   */
 
-  audio:not([controls]) {
+ audio:not([controls]) {
    display: none;
    height: 0;
  }
@@ -92,19 +91,19 @@
   * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
   */
 
-  [hidden],
-  template {
+ [hidden],
+ template {
    display: none;
  }
 
  /* Links
- ========================================================================== */
+    ========================================================================== */
 
  /**
   * Remove the gray background color from active links in IE 10.
   */
 
-  a {
+ a {
    background-color: transparent;
  }
 
@@ -112,19 +111,19 @@
   * Improve readability when focused and also mouse hovered in all browsers.
   */
 
-  a:active,
-  a:hover {
+ a:active,
+ a:hover {
    outline: 0;
  }
 
  /* Text-level semantics
- ========================================================================== */
+    ========================================================================== */
 
  /**
   * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
   */
 
-  abbr[title] {
+ abbr[title] {
    border-bottom: 1px dotted;
  }
 
@@ -132,8 +131,8 @@
   * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
   */
 
-  b,
-  strong {
+ b,
+ strong {
    font-weight: bold;
  }
 
@@ -141,7 +140,7 @@
   * Address styling not present in Safari and Chrome.
   */
 
-  dfn {
+ dfn {
    font-style: italic;
  }
 
@@ -150,7 +149,7 @@
   * contexts in Firefox 4+, Safari, and Chrome.
   */
 
-  h1 {
+ h1 {
    font-size: 2em;
    margin: 0.67em 0;
  }
@@ -159,7 +158,7 @@
   * Address styling not present in IE 8/9.
   */
 
-  mark {
+ mark {
    background: #ff0;
    color: #000;
  }
@@ -168,7 +167,7 @@
   * Address inconsistent and variable font size in all browsers.
   */
 
-  small {
+ small {
    font-size: 80%;
  }
 
@@ -176,8 +175,8 @@
   * Prevent `sub` and `sup` affecting `line-height` in all browsers.
   */
 
-  sub,
-  sup {
+ sub,
+ sup {
    font-size: 75%;
    line-height: 0;
    position: relative;
@@ -193,13 +192,13 @@
  }
 
  /* Embedded content
- ========================================================================== */
+    ========================================================================== */
 
  /**
   * Remove border when inside `a` element in IE 8/9/10.
   */
 
-  img {
+ img {
    border: 0;
  }
 
@@ -207,18 +206,18 @@
   * Correct overflow not hidden in IE 9/10/11.
   */
 
-  svg:not(:root) {
+ svg:not(:root) {
    overflow: hidden;
  }
 
  /* Grouping content
- ========================================================================== */
+    ========================================================================== */
 
  /**
   * Address margin not present in IE 8/9 and Safari.
   */
 
-  figure {
+ figure {
    margin: 1em 40px;
  }
 
@@ -226,7 +225,7 @@
   * Address differences between Firefox and other browsers.
   */
 
-  hr {
+ hr {
    -moz-box-sizing: content-box;
    box-sizing: content-box;
    height: 0;
@@ -236,7 +235,7 @@
   * Contain overflow in all browsers.
   */
 
-  pre {
+ pre {
    overflow: auto;
  }
 
@@ -244,16 +243,16 @@
   * Address odd `em`-unit font size rendering in all browsers.
   */
 
-  code,
-  kbd,
-  pre,
-  samp {
+ code,
+ kbd,
+ pre,
+ samp {
    font-family: monospace, monospace;
    font-size: 1em;
  }
 
  /* Forms
- ========================================================================== */
+    ========================================================================== */
 
  /**
   * Known limitation: by default, Chrome and Safari on OS X allow very limited
@@ -267,11 +266,11 @@
   * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
   */
 
-  button,
-  input,
-  optgroup,
-  select,
-  textarea {
+ button,
+ input,
+ optgroup,
+ select,
+ textarea {
    color: inherit; /* 1 */
    font: inherit; /* 2 */
    margin: 0; /* 3 */
@@ -281,7 +280,7 @@
   * Address `overflow` set to `hidden` in IE 8/9/10/11.
   */
 
-  button {
+ button {
    overflow: visible;
  }
 
@@ -292,8 +291,8 @@
   * Correct `select` style inheritance in Firefox.
   */
 
-  button,
-  select {
+ button,
+ select {
    text-transform: none;
  }
 
@@ -305,10 +304,10 @@
   *    `input` and others.
   */
 
-  button,
-  html input[type="button"], /* 1 */
-  input[type="reset"],
-  input[type="submit"] {
+ button,
+ html input[type="button"], /* 1 */
+ input[type="reset"],
+ input[type="submit"] {
    -webkit-appearance: button; /* 2 */
    cursor: pointer; /* 3 */
  }
@@ -317,8 +316,8 @@
   * Re-set default cursor for disabled elements.
   */
 
-  button[disabled],
-  html input[disabled] {
+ button[disabled],
+ html input[disabled] {
    cursor: default;
  }
 
@@ -326,8 +325,8 @@
   * Remove inner padding and border in Firefox 4+.
   */
 
-  button::-moz-focus-inner,
-  input::-moz-focus-inner {
+ button::-moz-focus-inner,
+ input::-moz-focus-inner {
    border: 0;
    padding: 0;
  }
@@ -337,7 +336,7 @@
   * the UA stylesheet.
   */
 
-  input {
+ input {
    line-height: normal;
  }
 
@@ -349,8 +348,8 @@
   * 2. Remove excess padding in IE 8/9/10.
   */
 
-  input[type="checkbox"],
-  input[type="radio"] {
+ input[type="checkbox"],
+ input[type="radio"] {
    box-sizing: border-box; /* 1 */
    padding: 0; /* 2 */
  }
@@ -361,8 +360,8 @@
   * decrement button to change from `default` to `text`.
   */
 
-  input[type="number"]::-webkit-inner-spin-button,
-  input[type="number"]::-webkit-outer-spin-button {
+ input[type="number"]::-webkit-inner-spin-button,
+ input[type="number"]::-webkit-outer-spin-button {
    height: auto;
  }
 
@@ -372,7 +371,7 @@
   *    (include `-moz` to future-proof).
   */
 
-  input[type="search"] {
+ input[type="search"] {
    -webkit-appearance: textfield; /* 1 */
    -moz-box-sizing: content-box;
    -webkit-box-sizing: content-box; /* 2 */
@@ -385,8 +384,8 @@
   * padding (and `textfield` appearance).
   */
 
-  input[type="search"]::-webkit-search-cancel-button,
-  input[type="search"]::-webkit-search-decoration {
+ input[type="search"]::-webkit-search-cancel-button,
+ input[type="search"]::-webkit-search-decoration {
    -webkit-appearance: none;
  }
 
@@ -394,7 +393,7 @@
   * Define consistent border, margin, and padding.
   */
 
-  fieldset {
+ fieldset {
    border: 1px solid #c0c0c0;
    margin: 0 2px;
    padding: 0.35em 0.625em 0.75em;
@@ -405,7 +404,7 @@
   * 2. Remove padding so people aren't caught out if they zero out fieldsets.
   */
 
-  legend {
+ legend {
    border: 0; /* 1 */
    padding: 0; /* 2 */
  }
@@ -414,7 +413,7 @@
   * Remove default vertical scrollbar in IE 8/9/10/11.
   */
 
-  textarea {
+ textarea {
    overflow: auto;
  }
 
@@ -423,18 +422,18 @@
   * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
   */
 
-  optgroup {
+ optgroup {
    font-weight: bold;
  }
 
  /* Tables
- ========================================================================== */
+    ========================================================================== */
 
  /**
   * Remove most spacing between table cells.
   */
 
-  table {
+ table {
    border-collapse: collapse;
    border-spacing: 0;
  }
@@ -449,10 +448,10 @@
   margin: 0px;
   padding: 0px;
   border: 0px;
-}
+ }
 
-.box {
-  background-color: #DB8F44;
+ .box {
+  background-color: orange;
   display: inline-block;
   height: 26rem;
   width: 33%;
@@ -462,42 +461,51 @@
   padding: 0px;
   border: 0px;
   overflow: scroll;
+<<<<<<< HEAD
   background-image: url("./notepad_page.png");
 }
+=======
+ }
+>>>>>>> f02be472f666941b8ee433afa7400847fd262cf6
 
-.dayticker {
+ .dayticker {
   background-color: black;
   color: white;
   width: 6%;
   margin: 0px;
   padding: 0px;
   border: 0px;
-}
+ }
 
-.eventlog {
+ .eventlog {
   background-color: none;
   margin: 0px;
   padding: 0px;
   border: 0px;
   overflow: scroll;
-}
+ }
 
-.events {
-  background-color: #910000;
+ .events {
+  background-color: red;
   margin: 0px;
   padding: 0px;
   border: 0px;
   overflow: scroll;
   text-align: center;
+<<<<<<< HEAD
   font-family: 'Times New Roman';
 }
+=======
+ }
+>>>>>>> f02be472f666941b8ee433afa7400847fd262cf6
 
-.abilities {
+ .abilities {
   background-color: green;
   margin: 0px;
   padding: 0px;
   border: 0px;
   overflow: scroll;
+<<<<<<< HEAD
   text-indent: none;
 }
 
@@ -507,6 +515,9 @@ a {
   font-family: 'Times New Roman';
   text-decoration: bold;
 }
+=======
+ }
+>>>>>>> f02be472f666941b8ee433afa7400847fd262cf6
 
 .characters {
   background-color: #993300;
@@ -543,17 +554,45 @@ a {
   text-align: center;
 }
 
-ul {
-  text-decoration: none;
-  list-style: none;
+img.bg {
+  /* Set rules to fill background */
+  min-height: 100%;
+  min-width: 1024px;
+  
+  /* Set up proportionate scaling */
+  width: 100%;
+  height: auto;
+  
+  /* Set up positioning */
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: -2;
 }
 
 .chatlog {
   size: 8px;
   font-family: 'Times New Roman';
   background-image: url("./notepad_page.png");
+
+#enterButton {
+  display: block;
+text-align: center;
+
+#enterButton img {
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  bottom: 120px;
+  transform: translateY(150%);
 }
 
-.nametitle {
-  text-decoration: bold;
+.preamble{
+  background-color: white;
+  opacity: 0.7;
+}
+
+.main_title{
+  text-align: center;
 }
