@@ -41,23 +41,19 @@ class StoryController < ApplicationController
         end
       end
     when 3
-        if @combined_morale >= @event.difficulty 
-          @result = 'success' 
-          @characters.each do |character|        
-            character.morale += (@event.difficulty / 2).round
-            character.save
-            if charcter.morale <= 0
-              character.status = 'dead'
-              character.save
-            end
-          end
-        else 
-          @result = 'failure'
-          @characters.each do |character|        
-            character.morale -= (@event.difficulty / 2).round
-            character.save
-          end
+      if @combined_morale >= @event.difficulty 
+        @result = 'success' 
+        @characters.each do |character|        
+          character.morale += (@event.difficulty / 2).round
+          character.save
         end
+      else 
+        @result = 'failure'
+        @characters.each do |character|        
+          character.morale -= (@event.difficulty / 2).round
+          character.save
+        end
+      end
     end   
 
     output = {'result' => @result}.to_json
@@ -98,6 +94,12 @@ class StoryController < ApplicationController
       @syed = Character.find(14)
       @syed.status = 'alive'
       @syed.save
+      @living_characters.each do |character|
+        if character.morale <= 0
+          character.status = 'dead'
+          character.save
+        end
+      end
     end
   end
 
