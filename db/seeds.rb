@@ -47,6 +47,6 @@ Ability.create(text: 'Val chooses Bulbasaur!', name: 'Kieran', character_id: 16,
 Ability.create(text: 'Graeme ponders John Cena', name: 'Kieran', character_id: 3, stat: "morale", boost: -1, days_to_cooldown: 1)
 Ability.create(text: "Tony cooks Gluten-free meal for Peter. Peter doesn't get any.", name: 'Kieran', character_id: 21, stat: "morale", boost: 1, days_to_cooldown: 5)
 Ability.create(text: 'Leigh-Anne applies warpaint to face', name: 'Kieran', character_id: 23, stat: "morale", boost: 1, days_to_cooldown: 1)
-Ability.create(text: 'Susie *tries* to play Rockband bass', name: 'Kieran', character_id: 4, stat: "morale", boost: 2, days_to_cooldown: 10)
+Ability.create(text: 'Jay slaps Rick', name: 'Kieran', character_id: 16, stat: "morale", boost: 2, days_to_cooldown: 10)
 Ability.create(text: 'Neil grooms mustache', name: 'Kieran', character_id: 10, stat: "morale", boost: 1, days_to_cooldown: 1)
 Ability.create(text: 'Nevin practices his Police brutallity!', name: 'Kieran', character_id: 7, stat: "attack", boost: 1, days_to_cooldown: 3)
