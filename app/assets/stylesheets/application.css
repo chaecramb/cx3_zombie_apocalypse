@@ -36,6 +36,7 @@
    background-color: black;
    font-family: HighZombie;
    font-size: 16px;
+ }
 
  /* HTML5 display definitions
     ========================================================================== */
@@ -461,15 +462,11 @@
   padding: 0px;
   border: 0px;
   overflow: scroll;
-<<<<<<< HEAD
   background-image: url("./notepad_page.png");
 }
-=======
- }
->>>>>>> f02be472f666941b8ee433afa7400847fd262cf6
 
  .dayticker {
-  background-color: black;
+  background-color: green;
   color: white;
   width: 6%;
   margin: 0px;
@@ -492,12 +489,8 @@
   border: 0px;
   overflow: scroll;
   text-align: center;
-<<<<<<< HEAD
   font-family: 'Times New Roman';
 }
-=======
- }
->>>>>>> f02be472f666941b8ee433afa7400847fd262cf6
 
  .abilities {
   background-color: green;
@@ -505,7 +498,6 @@
   padding: 0px;
   border: 0px;
   overflow: scroll;
-<<<<<<< HEAD
   text-indent: none;
 }
 
@@ -515,9 +507,6 @@ a {
   font-family: 'Times New Roman';
   text-decoration: bold;
 }
-=======
- }
->>>>>>> f02be472f666941b8ee433afa7400847fd262cf6
 
 .characters {
   background-color: #993300;
@@ -575,10 +564,12 @@ img.bg {
   size: 8px;
   font-family: 'Times New Roman';
   background-image: url("./notepad_page.png");
+}
 
 #enterButton {
   display: block;
-text-align: center;
+  text-align: center;
+}
 
 #enterButton img {
   margin-left: auto;
